@@ -19,6 +19,6 @@ if guild_id:
 intents = discord.Intents.default()
 intents.message_content = True
 
-bot = MovieNightBot(guild_id=guild_id, command_prefix='/', intents=intents)
+bot = MovieNightBot(guild_id=guild_id, command_prefix="/", intents=intents)
 
 bot.run(token, log_handler=None)
