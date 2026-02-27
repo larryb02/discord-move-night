@@ -8,6 +8,7 @@ A Discord bot for organizing movie nights. Runs nomination and voting cycles, an
 - Voting via Discord native polls
 - Winner announcement with pin and voter tags
 - Configurable nomination and voting durations
+- Automatically repeats the full movie night planning cycle at a configurable interval
 
 ## Commands
 
