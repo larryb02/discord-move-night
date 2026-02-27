@@ -3,15 +3,14 @@ import sys
 import logging
 
 import discord
-from config import load_env
+from config import settings
 from bot import MovieNightBot
 
-discord.utils.setup_logging(root=True)
+discord.utils.setup_logging(root=True, level=settings.get("LOG_LEVEL"))
 logger = logging.getLogger(__name__)
 
-load_env(".env")
-token = os.environ.get("APP_TOKEN")
-guild_id = os.environ.get("GUILD_ID", None)
+token = settings.get("APP_TOKEN")
+guild_id = settings.get("GUILD_ID")
 if not token:
     logger.error("APP_TOKEN is not set. Add it to your .env file or environment.")
     sys.exit()
