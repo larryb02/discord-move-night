@@ -2,3 +2,4 @@ discord.py
 pytest
 pytest-asyncio
 dynaconf
+httpx
