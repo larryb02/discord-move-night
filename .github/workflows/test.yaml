@@ -11,4 +11,4 @@ jobs:
                     python -m venv .venv; \
                     source .venv/bin/activate; \
                     python -m pip install -r requirements.dev.txt
-            - run: pytest -vvv tests/
+            - run: python -m pytest -vvv tests/
