@@ -12,11 +12,11 @@ class TestMovieList:
     async def test_add(self):
         ml = MovieList()
         await ml.add(make_movie(1))
-        assert len(ml.all()) == 1
+        assert len(ml._movies) == 1
 
     @pytest.mark.asyncio
     async def test_clear(self):
         ml = MovieList()
         await ml.add(make_movie(1))
         await ml.clear()
-        assert ml.all() == []
+        assert len(ml._movies) == 0
