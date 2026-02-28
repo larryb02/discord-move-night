@@ -11,4 +11,5 @@ jobs:
                     python -m venv .venv; \
                     source .venv/bin/activate; \
                     python -m pip install -r requirements.dev.txt; \
+                    export APP_LOG_LEVEL=DEBUG; \
                     python -m pytest -vvv tests/
