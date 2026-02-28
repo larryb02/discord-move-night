@@ -5,7 +5,7 @@ import discord
 from config import settings
 from bot import MovieNightBot
 
-discord.utils.setup_logging(root=True, level=settings.get("LOG_LEVEL"))
+discord.utils.setup_logging(root=True, level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 token = settings.get("APP_TOKEN")
