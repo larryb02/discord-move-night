@@ -25,5 +25,6 @@ class MovieList:
         async with self._lock:
             self._movies.clear()
 
-    def all(self) -> list[Movie]:
-        return list(self._movies)
+    async def all(self) -> list[Movie]:
+        async with self._lock:
+            return list(self._movies)
